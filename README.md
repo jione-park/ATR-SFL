@@ -1,54 +1,54 @@
 # Hermes
 
-Hermes is a research repository for studying communication-efficient federated split learning with ViT-family models in wireless environments.
+Hermes is a public code-first repository for studying communication-efficient federated split learning with ViT-family models in wireless environments.
 
-The immediate goal is not to collect disconnected experiments. The goal is to build a research harness that lets a human researcher and an agent collaborate on:
+This repo intentionally tracks only the runnable code surface:
 
-- reading papers and preserving structured review notes
-- turning hypotheses into controlled experiment plans
-- running reproducible experiments
-- upgrading claims only when evidence is strong enough
+- `src/`
+- `configs/`
+- `scripts/`
+- `README.md`
+- `AGENTS.md`
+
+Research notes, plans, vendor snapshots, datasets, and experiment outputs are kept out of version control in this public repo.
 
 ## Repository map
 
-- `AGENTS.md`: operating rules for coding agents and human-agent collaboration
-- `docs/`: problem definition, protocols, baselines, paper reviews, ideas, and decisions
-- `plans/`: timestamped plan directories for large tasks or experiments
-- `configs/`: experiment configuration files
+- `AGENTS.md`: operating rules for coding agents and public-repo scope
+- `configs/`: versioned experiment configurations
+- `scripts/`: execution helpers
 - `src/`: implementation code
-- `scripts/`: small set of canonical validation, scaffold, and execution scripts
-- `experiments/`: canonical run records, summaries, figures, and tables
-- `docker/`: reproducible container environment
-- `conda/`: local fallback environment definitions
-- `artifacts/`: legacy pre-standardization bootstrap outputs
-- `data/`: dataset location instructions only; do not commit raw datasets
 
 ## First reading order
 
 1. `AGENTS.md`
-2. `docs/README.md`
-3. `docs/harness_engineering.md`
-4. `docs/problem_formulation.md`
-5. `docs/experiment_protocol.md`
-6. `docs/baselines.md`
+2. `README.md`
+3. `configs/README.md`
+4. `src/README.md`
+5. one config under `configs/experiment/`
+6. `src/train.py`
+7. `src/engine/sfl_trainer.py`
 
 ## For External AI Tools
 
-If an external AI tool indexes this repository, use the following reading order first:
+If an external AI tool indexes this repository, read in this order:
 
 1. `AGENTS.md`
-2. `docs/problem_formulation.md`
-3. `docs/experiment_protocol.md`
-4. `docs/baselines.md`
-5. latest active `plans/YYYYMMDD/*/plan.md`
+2. `README.md`
+3. `configs/README.md`
+4. `src/README.md`
+5. `configs/experiment/*.json`
+6. `src/train.py`
+7. `src/engine/sfl_trainer.py`
 
-Treat `AGENTS.md` and the documents under `docs/` as the source of truth. Do not infer the protocol from stale experiment outputs alone.
+Treat `AGENTS.md`, `README.md`, `configs/`, and `src/` as the source of truth.
 
 ## Current status
 
-This repository now contains:
+This repository currently contains:
 
-- research harness and documentation scaffold
-- FeSViBS reference snapshot under `third_party/`
-- bootstrap `CIFAR-10 + IID + full-token + DeiT-Tiny` training-time SFL code path
-- Docker and local Conda execution paths for early sanity validation
+- bootstrap `CIFAR-10/CIFAR-100 + DeiT-Tiny` training-time SFL code
+- two protocol names used consistently in code and configs
+  - `sequential_server_bootstrap`
+  - `parallel_round_server_tail`
+- local run outputs still written under ignored paths such as `data/` and `experiments/`

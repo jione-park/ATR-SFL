@@ -7,28 +7,18 @@ __pycache__/
 venv/
 .local/
 .codex
+docs/
+plans/
+docker/
+conda/
+third_party/
+Makefile
 
-artifacts/runs/
-artifacts/tmp/
 artifacts/
 results/
+experiments/
 
-data/*
-!data/README.md
-
-experiments/runs/*
-!experiments/runs/README.md
-experiments/figures/*
-!experiments/figures/README.md
-experiments/tables/*
-!experiments/tables/README.md
-experiments/summaries/*.csv
-!experiments/summaries/README.md
-!experiments/summaries/_templates/
-!experiments/summaries/_templates/phase_summary.md
-
-third_party/FeSViBS/.git/
-third_party/FeSViBS/.git_vendor_backup/
+data/
 
 *.pyc
 *.pyo

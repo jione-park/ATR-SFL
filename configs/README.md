@@ -2,13 +2,16 @@
 
 Put versioned experiment configurations here.
 
-Bootstrap choice:
+This public repo keeps configs in git, while datasets and run outputs remain local and ignored.
 
-- the first runnable config is stored as JSON to avoid adding a YAML parser dependency before the training stack stabilizes
+Current practice:
+
+- keep one config per experiment family
+- keep protocol, split layer, baseline, and dataset explicit in the file
+- use JSON while the runtime stays dependency-light
 
 Recommended properties:
 
-- one config per experiment family
 - explicit token reduction settings
 - explicit communication accounting settings
 - explicit split learning cut point

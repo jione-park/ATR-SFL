@@ -172,7 +172,6 @@ class BaseTrainer:
     def _build_metadata(self) -> Dict:
         return {
             "repo_commit": get_git_commit("."),
-            "reference_commit": get_git_commit("third_party/FeSViBS"),
             "created_at_epoch_sec": time.time(),
             "training_protocol": self.training_protocol,
         }
