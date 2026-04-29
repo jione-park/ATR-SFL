@@ -26,8 +26,9 @@ Do not treat an old conversation, deleted markdown, or stale local outputs as th
   - `scripts/`
   - `README.md`
   - `AGENTS.md`
+- Keep local research workspace directories such as `docs/`, `plans/`, `experiments/`, `data/`, `docker/`, `conda/`, and `third_party/` on disk when needed for local work, but do not track them in the public git repo unless the user explicitly asks for that.
 - Do not commit datasets, experiment outputs, paper notes, plans, local environments, or vendor snapshots unless the user explicitly asks for that.
-- Local artifacts may still be written under ignored paths such as `data/`, `experiments/`, `artifacts/`, and `results/`.
+- Local artifacts may still be written under ignored paths such as `docs/`, `plans/`, `data/`, `experiments/`, `artifacts/`, and `results/`.
 
 ## Working rules
 
@@ -49,7 +50,7 @@ Do not treat an old conversation, deleted markdown, or stale local outputs as th
 - `configs/`: versioned experiment configs
 - `src/`: implementation
 - `scripts/`: repeatable command entry points
-- ignored local paths may still exist for datasets and run outputs
+- ignored local paths such as `docs/`, `plans/`, and `experiments/` may still exist for research records and run outputs
 
 ## Naming conventions
 

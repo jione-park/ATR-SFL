@@ -11,6 +11,7 @@ This repo intentionally tracks only the runnable code surface:
 - `AGENTS.md`
 
 Research notes, plans, vendor snapshots, datasets, and experiment outputs are kept out of version control in this public repo.
+Those directories may still exist locally for research work. In particular, `docs/`, `plans/`, `experiments/`, `data/`, `docker/`, `conda/`, and `third_party/` are part of the local workspace but are intentionally not tracked in the public git history.
 
 ## Repository map
 
@@ -51,4 +52,4 @@ This repository currently contains:
 - two protocol names used consistently in code and configs
   - `sequential_server_bootstrap`
   - `parallel_round_server_tail`
-- local run outputs still written under ignored paths such as `data/` and `experiments/`
+- local research records and run outputs may still be written under ignored paths such as `docs/`, `plans/`, `data/`, and `experiments/`
